@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.js"></script>
+    <style>
+        div{
+            border: 2px solid red;
+        }
+        .myclass{
+            background-color: antiquewhite;
+        }
+        .textclass{
+            color: royalblue;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="div1">
+        
+    </div>
+    <button onclick="Generatebtns()">generate btn</button>
+    <button onclick="stopclick()">stop</button>
+    <!-- <div>
+
+        <p>para in div 2</p>
+    </div> -->
+    <!-- <button onclick="addclass()">Add class</button>
+    <button  onclick="removeclass()">remove class</button>
+    <button  onclick="toggleclass()">toggle class</button> -->
+    <script>
+
+        function Generatebtns(){
+            var div=document.getElementById("div1")
+            for(var i=1;i<=3;i++){
+                div.innerHTML+=`<button class='btn'>btn ${i}</button>`
+            }
+
+            var btns=document.getElementsByClassName("btn")
+            for(var i=0;i<btns.length;i++){
+                btns[i].addEventListener("click",function(){
+                    alert(this.innerHTML)
+                })
+            }
+        }
+
+        // function Generatebtns(){
+        //     for(var i=1;i<=3;i++){
+        //         $("#div1").html($("#div1").html()+`<button class='btn'>btn ${i}</button>`)
+        //     }
+        // }
+
+        // $("#div1").on("click",".btn",function(){
+        //     alert($(this).text())
+        // })
+
+        function stopclick(){
+            console.log("stop")
+            $(".btn").off('click')
+        }
+
+        
+        ///event
+        // $("#div1").on("click mouseenter",function(){
+        //     $(this).css("color","green")
+        // })
+        // $("#div1").on("mouseout",function(){
+        //     $(this).css("color","blue")
+        // })
+        // $("div").click(function(e){
+        //     $(this).css("color","green")
+        // })
+        // $("div").text("hello div")
+        //css ==>style in js
+        // $("div").css("color","green")
+        // $("div").css({
+        //     "color":"red",
+        //     "padding":"20px",
+        //     // "background-color":"gray"
+        // })
+        //innerhtml in js
+    // var div=document.getElementById("div1");
+    // div.innerHTML+="<span>My span</span>"
+    // console.log($("#div1").html())
+    // $("#div1").html($("#div1").html()+"<span>My span</span>")
+
+    //append and prepend
+    // $("#div1").append("<span>end span</span>")
+    // $("#div1").prepend("<span>start span</span>")
+    // $("<span>end 2 span</span>").appendTo($("#div1"))
+    // $("<span>start 2 span</span>").prependTo($("#div1"))
+
+    // $("span").remove()
+
+///addclass , remove class,toggle class
+//         $("#div1").attr("class","myclass")
+//         function addclass(){
+//             $("#div1").addClass("textclass")
+//         }
+//         function removeclass(){
+//             $("#div1").removeClass("textclass")
+
+//         }
+// function toggleclass(){
+//             $("#div1").toggleClass("textclass")
+
+//         }
+        //in js setattr and getattr
+        // var div=document.getElementById("div1");
+        // div.setAttribute("class","myclass")
+        // console.log(div.getAttribute("class"))
+        // $("#div1").attr("class","myclass")
+        // console.log($("div")[0])
+        // $($("div")[0]).attr({
+        //     "class":"myclass",
+        //     "href":"#",
+        //     "title":"my div"
+        // })
+        // // console.log($("#div1").attr("class"))
+        // console.log($("div").first())
+        // $("div").first().attr({
+        //     "class":"myclass",
+        //     "href":"#",
+        //     "title":"my div"
+        // })
+    </script>
+</body>
+</html>
