@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.js"></script>
+    <style>
+        div{
+            background-color: antiquewhite;
+            margin-bottom: 10px;
+        }
+        #table1,tr,td,th{
+            border: 1px solid black;
+        }
+        th,td{
+            padding: 10px;
+        }
+        tr:nth-child(even){
+            background-color: rgb(146, 155, 160);
+        }
+        tr:nth-child(odd){
+            background-color:rgb(133, 169, 236);
+        }
+    </style>
+</head>
+<body>
+    <!-- <div>My div1</div>
+    <div class="mydiv">My div2</div>
+    <div>My div3</div>
+    <div class="mydiv">My div4</div>
+
+    <ul>
+        <li class="mylink">
+            <a>link1</a>
+            <u>link</u>
+        </li>
+        <li>
+            <a>link2</a>
+        </li>
+        <li>
+            <a class="mylink">link3</a>
+        </li>
+        <li>
+            <a class="mylink">link4</a>
+        </li>
+    </ul> -->
+    <button onclick="getusers()">Get Users</button>
+    <table id="table1" >
+        <thead>
+            <tr style="background-color: white;">
+                <th>ID</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+            <!-- <tr>
+                <td>1</td>
+                <td>ahmed</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>ahmed</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>ahmed</td>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>ahmed</td>
+            </tr> -->
+        </tbody>
+    </table>
+
+    <script>
+
+        function getusers(){
+            // $.ajax({
+            //     "url":"https://jsonplaceholder.typicode.com/users",
+            //     "method":"get",
+            //     "success":function(users){
+            //         users.forEach(user => {
+            //             var tr=$("<tr></tr>")
+            //             $(tr).html(`<td>${user.id}</td> 
+            //             <td>${user.name}</td>`)
+            //            $("#table1 tbody").append(tr)
+            //         });
+            //         $("#table1").css("display","inline-block")
+            //     },
+            //     "error":function(){
+
+            //     }
+            // })
+            $.get("https://jsonplaceholder.typicode.com/users",function(users){
+                    users.forEach(user => {
+                        var tr=$("<tr></tr>")
+                        $(tr).html(`<td>${user.id}</td> 
+                        <td>${user.name}</td>`)
+                       $("#table1 tbody").append(tr)
+                    });
+                    // $("#table1").css("display","inline-block")
+            })
+        }
+        // $(".mydiv").height("100px")
+        // .width("100px")
+
+        //traversing methods
+        // $("ul").children(".mylink")
+        // .css("color","green")
+
+        // console.log( $("ul").find(".mylink")
+        // .css("color","red")
+        // .end()
+        // .css("color","green"))
+        
+
+    //    console.log($("ul").find(".mylink")
+    //     .css("color","red")
+    //     .find("u")
+    //     .css("color","green")
+    //     .text("hello")
+    //     .end()
+    // )
+
+        // console.log($("div").not(".mydiv")
+        // .css("color","red"))
+    </script>
+</body>
+</html>

@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.js"></script>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+        #div1{
+            background-color: aqua;
+            width: 100px;
+            height: 100px;
+            position: relative;
+        }
+        ul{
+            background-color: aliceblue;
+            margin-bottom: 5px;
+        }
+        ul li{
+            display: inline-block;
+            padding: 10px;
+        }
+        .content{
+            background-color: antiquewhite;
+            padding: 10px;
+            display: none;
+        }
+        .active{
+            border: 2px solid black;
+            color: white;
+            background-color:#489fde;
+        }
+    </style>
+</head>
+<body>
+
+     <div id="div1">My Div
+        <p>para in div</p>
+     </div>
+    <!-- <button onclick="hide()"  >hide</button>
+    <button onclick="show()"  >show</button>
+    <button onclick="toggle()"  >toggle</button>  -->
+    <!-- <ul>
+        //bata-target="task1"
+
+        <li class="task1" >Task1</li> 
+        <li class="task2">Task2</li>
+        <li class="task3">Task3</li>
+    </ul>
+
+    <p class="content" id="task1">Task1 content</p>
+    <p id="task2" class="content">Task2 content</p>
+    <p id="task3" class="content">Task3 content</p> -->
+
+    <!-- <button onclick="fadein()"  >fadein</button>
+    <button onclick="fadeout()"  >fadeout</button>
+    <button onclick="fadetoggle()"  >fadetoggle</button> 
+
+    <button onclick="slideup()"  >slideup</button>
+    <button onclick="slidedown()"  >slidedown</button>
+    <button onclick="slidetoggle()"  >slidetoggle</button>  -->
+    <!-- <button onclick="animat()">animate</button>
+    <button onclick="stopanimate()">stop</button> -->
+
+    <script>
+    ///chaning
+    // $("#div1").addClass("active")
+    // .css("height","150px")
+    // .text("hello div")
+    // .animate({
+    //     "left":"200px"
+    // },3000)
+
+    //    console.log( ["c","b","a"].reverse().join("+").toUpperCase())
+    //empty
+        // $("#div1").empty()
+    //animate,stop
+
+        // function stopanimate(){
+        //     $("#div1").stop()
+        // }
+        // function animat(){
+        //     $("#div1").animate({
+        //         "left":"200px"
+        //     },3000)
+        // }
+
+    //fadein ,fadeout,fadetoggle,slideup,slidedown,slidetoggle
+    // function fadein(){
+    //     $("#div1").fadeIn(2000)
+    // }
+       
+    // function fadeout(){
+    //     $("#div1").fadeOut(3000,function(){
+    //         $(this).fadeIn(2000)
+    //     })
+    // }
+    // function fadetoggle(){
+    //     $("#div1").fadeToggle("fast")
+    // }
+    // function slideup(){
+    //     $("#div1").slideUp(2000)
+    // }
+    // function slidedown(){
+    //     $("#div1").slideDown(4000)
+    // }
+    // function slidetoggle(){
+    //     $("#div1").slideToggle("slow")
+    // }
+    ///hover
+        // $("#div1").hover(function(){
+        //     $(this).toggleClass("active")
+        // })
+        // $("#div1").hover(function(){
+        //     $(this).addClass("active")
+        // },function(){
+        //     $(this).removeClass("active")
+        // })
+    ///// hide ,show and toggle
+
+        // $("ul li").first().addClass("active")
+        // $("#task1").css("display","block")
+
+        // $("ul li").click(function(){
+        //     var contentid=$(this).attr("class");
+
+        //     var last_taskid= $(".active")
+        //     .removeClass("active")
+        //     .attr("class");
+
+        //     $(this).addClass("active");
+
+        //     $(`#${last_taskid}`).hide();
+
+        //     $(`#${contentid}`).show();
+
+
+        // })
+        // function hide(){
+        //     $("#div1").hide()
+        // }
+
+        // function show(){
+        //     $("#div1").show()
+        // }
+        // function toggle(){
+        //     $("#div1").toggle()
+        // }
+
+    </script>
+</body>
+</html>
